@@ -17,9 +17,10 @@ var targetLang string
 var sourceText string
 
 func init() {
-	flag.StringVar(&sourceLang, "s", "zh-TW", "輸入的文字語系")
-	flag.StringVar(&targetLang, "t", "en", "翻譯的文字語系")
-	flag.StringVar(&sourceLang, "st", "Text", "翻譯的文字")
+
+	flag.StringVar(&sourceLang, "s", "en", "輸入的文字語系")
+	flag.StringVar(&targetLang, "t", "fr", "翻譯的文字語系")
+	flag.StringVar(&sourceText, "st", "", "翻譯的文字")
 
 }
 

@@ -4,6 +4,8 @@ import (
 	"flag"
 	"fmt"
 	"os"
+
+	"go-translate-cli/cli"
 )
 
 var sourceLang string
@@ -24,4 +26,12 @@ func main() {
 		flag.PrintDefaults()
 		os.Exit(1)
 	}
+
+	reqBody := &cli.RequestBody{
+		SourceLang: sourceLang,
+		TargetLang: targetLang,
+		SourceText: sourceText,
+	}
+
+	cli.RequestTranslate(reqBody)
 }
